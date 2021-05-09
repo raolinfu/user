@@ -1,0 +1,34 @@
+server:
+  port: 8088
+
+---
+spring:
+  config:
+    activate:
+      on-profile: test
+server:
+  port: 8001
+
+person:
+  name: hu
+---
+
+spring:
+  config:
+    activate:
+      on-profile: dev
+server:
+  port: 8002
+
+person:
+  name: rao
+
+---
+person:
+  name: lin
+server:
+  port: 8009
+spring:
+  config:
+    activate:
+      on-profile: prod
