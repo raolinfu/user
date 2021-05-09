@@ -1,18 +1,19 @@
 server:
   port: 8088
 
----
 spring:
-  config:
-    activate:
-      on-profile: test
-server:
-  port: 8001
+  datasource:
+    url: jdbc:mysql://localhost:3306/school?serverTimezone=UTC
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+    tomcat:
+      initial-size: 20
+      min-idle: 10
+      max-active: 100
 
-person:
-  name: hu
+
 ---
-
 spring:
   config:
     activate:
@@ -23,6 +24,16 @@ server:
 person:
   name: rao
 
+---
+spring:
+  config:
+    activate:
+      on-profile: test
+server:
+  port: 8001
+
+person:
+  name: hu
 ---
 person:
   name: lin
