@@ -31,9 +31,4 @@ class DemoApplicationTests {
         System.out.println(userMapper.findById(1));
     }
 
-    @Test
-    void testUserMapper(){
-        System.out.println(userMapper.findById(1));
-    }
-
 }
